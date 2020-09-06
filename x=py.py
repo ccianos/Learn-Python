@@ -100,5 +100,23 @@ b = a # =>  declar var b and point it to same object a references
 b is a # => True
 b == a # => True
 b = [1, 2, 3, 4] # => assign b as reference to new list object
-b is a # => False, different objects
+b is a # => False, different objects referenced
 b == a # => True, object have same value
+
+# Strings
+"Double quote string." # => 'Double quote string.'
+'Single quote string.' # => 'Single quote string.'
+
+# Concatenate strings with the + operator should be avoided
+"Hello " + "Python!" # => 'Hello Python!'
+# non-variable based string literals can be concatenated via juxposition
+"Hello " "Python!" # => 'Hello Python!'
+
+# We can reference a char at the index of string
+"This is a sequence of chars"[10] # => 's'
+
+# Query length of string
+len("This is a sequence of chars") # => 27
+
+# Format using f-strings for formatted string literals
+name = "Charlie"
