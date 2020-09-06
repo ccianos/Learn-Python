@@ -5,6 +5,9 @@ Multiline comments
 can be had with a pair of
 triple double quotes. 
 """
+#########################################
+## Primitive Data Types and Operations ##
+#########################################
 
 # Numbers
 3 # => 3
@@ -120,3 +123,31 @@ len("This is a sequence of chars") # => 27
 
 # Format using f-strings for formatted string literals
 name = "Charlie"
+f"Hey friends, I'm {name}." # => "Hey friends, I'm Charlie."
+f"{name} is {len(name)} chars long." # => 'Charlie is 7 chars long.'
+
+# None is an object
+None # => None
+
+# Do not use == when comparing an object to None 
+# Utilize is keyword to compare objects to None via object identity.
+"etc" is None # => False
+None is None # => True
+
+# None, 0, and empty strings/lists/dicts/tuples all evaluate to False.
+# All other values are True
+bool(0) # => False
+bool("") # => False
+bool([]) # => False
+bool({}) # => False
+bool(()) # => False
+
+###############################
+## Variables and Collections ##
+###############################
+
+# print function
+print("Hello, beautiful Python!") # => Hello, beautiful Python! 
+
+# Use optional end argument with print to toggle new line
+print("Hello there", end="! ") # => Hello, beautiful Python! 
