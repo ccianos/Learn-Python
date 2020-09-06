@@ -1,4 +1,4 @@
-# A single line comment .
+# A single line comment
 
 """
 Multiline comments
@@ -53,7 +53,7 @@ True or False # => True
 False or False # => False
 False or True # => True
 
-# True and False are essentially keywords for 1 and 0 respectively.
+# True and False are essentially keywords for 1 and 0 respectively
 True + True # => 2
 True * 8 # => 8
 False - 5 # -5
@@ -79,9 +79,26 @@ bool(-6) # => True
 1 != 1 # => False
 2 != 1 # => True
 
-# Additional Comparisons
+# Additional comparisons
 1 < 10 # => True
 1 > 10 # => False
 2 <= 2 # => True
 2 >= 2 # True
 
+# Test for a value within a range
+1 < 2 and 2 < 3 # => True
+2 < 3 and 3 < 2 # => False
+
+# Test for a value within a range with chaining
+1 < 2 < 3 # => True
+2 < 3 < 2 # => False
+
+# is checks if two vars are referencing the identical object, vs
+# == which tests if objects have equality of value.
+a = [1, 2, 3, 4] # => declare var a as reference to new list
+b = a # =>  declar var b and point it to same object a references
+b is a # => True
+b == a # => True
+b = [1, 2, 3, 4] # => assign b as reference to new list object
+b is a # => False, different objects
+b == a # => True, object have same value
