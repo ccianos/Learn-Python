@@ -98,8 +98,8 @@ bool(-6) # => True
 
 # is checks if two vars are referencing the identical object, vs
 # == which tests if objects have equality of value.
-a = [1, 2, 3, 4] # => declare var a as reference to new list
-b = a # =>  declar var b and point it to same object a references
+a = [1, 2, 3, 4] # => assign var a as reference to new list
+b = a # =>  assign var b and point it to same object a references
 b is a # => True
 b == a # => True
 b = [1, 2, 3, 4] # => assign b as reference to new list object
@@ -151,3 +151,17 @@ print("Hello, beautiful Python!") # => Hello, beautiful Python!
 
 # Use optional end argument with print to toggle new line
 print("Hello there", end="! ") # => Hello, beautiful Python! 
+
+# Simple way to get data from console
+input_string_var = input("Please enter some data: ")
+
+# No declarations, only assignments.
+# Convention is to use lowercase_with_underscore
+some_var = 5
+some_var # => 5
+
+# Accessing an unassigned variable is an exception
+# some_unkown_var # =>  Raises a NameError
+
+# if can be used as an ternary-like expression 
+"Woo!" if 0 > 1 else "Arrr!" # => 'Arrr!'
