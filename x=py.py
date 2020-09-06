@@ -70,3 +70,18 @@ bool(4) # => True
 bool(-6) # => True
 0 and 2 # => 0
 -5 or 0 # => -5
+
+# Equality
+1 == 1 # => True
+2 == 1 # => False
+
+# Inequality
+1 != 1 # => False
+2 != 1 # => True
+
+# Additional Comparisons
+1 < 10 # => True
+1 > 10 # => False
+2 <= 2 # => True
+2 >= 2 # True
+
