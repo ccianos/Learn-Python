@@ -38,3 +38,5 @@ li.pop() # => li is now [1, 2, 4]
 li.append(3) # append 3 back
 li # => [1, 2, 4, 3]
 
+# Access a value of the list by index
+li[0]
