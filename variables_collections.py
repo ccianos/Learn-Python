@@ -22,11 +22,11 @@ some_var # => 5
 # if can be used as an ternary-like expression 
 "Woo!" if 0 > 1 else "Arrr!" # => 'Arrr!'
 
-# Lists store sequences and can be prefilled during assigment.
+# Lists store sequences and can be prefilled during assigment
 li = []
 other_li = [4, 5, 6]
 
-# Add to the list via the append method.
+# Add to the list via the append method
 li.append(1) # => li is now [1]
 li.append(2) # => li is now [1, 2]
 li.append(4) # => li is now [1, 2, 4]
@@ -40,3 +40,6 @@ li # => [1, 2, 4, 3]
 
 # Access a value of the list by index
 li[0]
+
+# Negative index reverses order of list traversal
+li[-1]
