@@ -34,12 +34,44 @@ li.append(3) # => li is now [1, 2, 4, 3]
 # Remove an element from the list's end with pop by default,
 # or at specified index.
 li.pop() # => li is now [1, 2, 4]
-
 li.append(3) # append 3 back
 li # => [1, 2, 4, 3]
 
 # Access a value of the list by index
-li[0]
-
+li[0] # => 1
 # Negative index reverses order of list traversal
-li[-1]
+li[-1] # => 3
+
+# Out of bound lookup raises an IndexError
+# li[4] # => IndexError: list index out of range
+
+# Slice syntax is available to capture a range.
+# Start index included while end is not
+# li[start:end:step]
+li[1:3] # => [2, 4]
+li[2:] # [4, 3]
+li[:3] # => [1, 2, 4]
+li[::2] # => [1, 4]
+li[::-1] # => [3, 4, 2, 1]
+
+# Use slices to make a copy of a list 
+li2 = li[:] # => [1, 2, 4, 3]. { li2 is li } results in false.
+
+# del removes arbitray elements from the list 
+del li[2] 
+li # => [1, 2, 3]
+
+# Remove first occurance of value
+li.remove(2)
+# li.remove(2) # => ValueError: list.remove(x): x not in list
+li # => [1, 3]
+
+# Insert a value at a specific element.
+li.insert(1, 2)
+li # => [1, 2, 3]
+
+# Retrieve index of first occurance matching argument
+li.index(2) # => 1
+# li.index(4) # => ValueError: 4 is not in list
+
+# We can add lists togeather
