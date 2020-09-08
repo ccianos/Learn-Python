@@ -157,3 +157,12 @@ filled_dict.get("one", "Did you think this would be None?") # => 1
 # Only insert into dictionary if key is not present
 filled_dict.setdefault("five", 5) # => {'one': 1, 'two': 2, 'three': 3, 'five': 5}
 filled_dict.setdefault("five", 6) # (filled_dict["five"] == 5) == True => True
+
+# Adding to dicitonary
+filled_dict.update({"nine" : 9}) # => {'one': 1, 'two': 2, 'three': 3, 'five': 5, 'nine': 9}
+filled_dict["half"] = 0.5
+filled_dict.get("half") # => 0.5
+
+# remove keys from a dictionary with del
+del filled_dict["half"] 
+filled_dict.get("half") == None # => True
