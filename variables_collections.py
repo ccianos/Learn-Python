@@ -92,6 +92,16 @@ len(li) # => 6
 
 # Tuples are like lists but are immutable.
 tup = (1, 2, 3)
-tup[0]
+tup[0] # => 1
 #  tup[0] = 12 => TypeError: 'tuple' object does not support item assignment
 
+# Single element length tuples must be followed by an appended comma
+type((10,))  # => <class 'tuple'>
+type((10, 9)) # => <class 'tuple'>
+type((0))  # => () <class 'int'>
+type(())  # => () <class 'tuple'>
+type((10))  # => () <class 'int'>
+
+# Most list operations can be called on tuples
+len(tup) # => 3
+tup + (4, 5, 12) # => (1, 2, 3, 4, 5, 6) 
