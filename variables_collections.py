@@ -124,4 +124,32 @@ d, e, f = 4, 5, 6
 d, e = e, d # Swap d => 4, and e => 5  so d == 5 and e == 4 is True
 
 # Dicitonaries mappning key and value pairs
-empty_dictionary = {}
+empty_dict = {}
+# Prefilled dictionary
+filled_dict = {"one" : 1, "two" : 2, "three" : 3}
+# keys must be immutable type i.e. ints, floats, strings, tuples
+# invalid_dict = {[1, 2, 3] : "123"} => TypeError: unhashable type: 'list'
+valid_dict = {(1, 2, 3) : [1, 2, 3]} 
+valid_dict # => {(1, 2, 3): [1, 2, 3]}
+
+# lookup value of key with brackets
+filled_dict["two"] # => 2
+valid_dict[(1,2,3)] # => [1, 2, 3]
+
+# Python 3.7+ guarantees dictionary key ordering.
+# Get all keys as an iterable with keys() method
+list(filled_dict.keys()) # => ['one', 'two', 'three']
+# Test for existence of key with in keyword
+"one" in filled_dict # => True
+1 in filled_dict # => False
+
+# Looking up non-existent keys is a KeyError
+filled_dict["nine"] # => KeyError: 'nine' 
+
+# get() method provides graceful KeyError alternative 
+# by returning None <class 'NoneType'>.
+filled_dict.get("nine") # => None
+filled_dict.get("two") # => 2
+# Default value is supported for out-of-bound call on get()
+filled_dict.get("nine", "Did you think this would be None?") # => 'Did you think this would be None'
+filled_dict.get("one", "Did you think this would be None?") # => 1
