@@ -105,3 +105,23 @@ type((10))  # => () <class 'int'>
 # Most list operations can be called on tuples
 len(tup) # => 3
 tup + (4, 5, 12) # => (1, 2, 3, 4, 5, 6) 
+tup[:2] # => (1, 2)
+2 in tup[:2] # => True
+
+# Unpack tuples and lists into variables
+a, b, c = (3, 2, 1)
+( a + b) ** (c / 2) # => 2.23606797749979
+# Extended unpacking
+a, *b, c = (1, 2, 3, 5, 4)
+a # => a
+b # => [2, 3, 5]
+c # => 4
+# Tuples are the default if a sequence is without parens or brackets
+d, e, f = 4, 5, 6
+# d => 4 
+# e => 5
+# f => 6
+d, e = e, d # Swap d => 4, and e => 5  so d == 5 and e == 4 is True
+
+# Dicitonaries mappning key and value pairs
+empty_dictionary = {}
