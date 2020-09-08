@@ -153,3 +153,7 @@ filled_dict.get("two") # => 2
 # Default value is supported for out-of-bound call on get()
 filled_dict.get("nine", "Did you think this would be None?") # => 'Did you think this would be None'
 filled_dict.get("one", "Did you think this would be None?") # => 1
+
+# Only insert into dictionary if key is not present
+filled_dict.setdefault("five", 5) # => {'one': 1, 'two': 2, 'three': 3, 'five': 5}
+filled_dict.setdefault("five", 6) # (filled_dict["five"] == 5) == True => True
