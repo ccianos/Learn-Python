@@ -75,3 +75,15 @@ li.index(2) # => 1
 # li.index(4) # => ValueError: 4 is not in list
 
 # We can add lists togeather
+# Values for li and other_li will not be modified
+li + other_li # => [1, 2, 3, 4, 5, 6]
+
+# Concatenate lists with the method extend(),
+# by appending elements from the iterable.
+li.extend(other_li) 
+li # => [1, 2, 2, 3, 4, 5, 6]
+
+# Check for the existence of a value.
+1 in li # => True
+-1 in li # => False
+
