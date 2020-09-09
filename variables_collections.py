@@ -166,3 +166,15 @@ filled_dict.get("half") # => 0.5
 # remove keys from a dictionary with del
 del filled_dict["half"] 
 filled_dict.get("half") == None # => True
+
+# Additional unpacking options are available starting with Python 3.5
+{'a': 1, **{'b': 2}} # => {'a': 1, 'b': 2}
+
+# Sets
+empty_set = set()
+# Initialize a set with numbers
+some_set = {1, 1, 2, 2, 3, 4} # => {1, 2, 3, 4}
+
+# Elements of a set must be immutbale  
+# invalid_set = {[1], 1} => TypeError: unhashable type: 'list'
+valid_set = {(1,), 1}
