@@ -178,3 +178,35 @@ some_set = {1, 1, 2, 2, 3, 4} # => {1, 2, 3, 4}
 # Elements of a set must be immutbale  
 # invalid_set = {[1], 1} => TypeError: unhashable type: 'list'
 valid_set = {(1,), 1}
+# Add another element to the set
+filled_set = some_set
+filled_set.add(5)  # Add element with value 5
+filled_set # => {1, 2, 3, 4, 5}
+filled_set.add(5)  # Has no effect if the element is already present
+
+# Set intersection utilizing &
+other_set = {3, 4, 5, 6}
+filled_set & other_set # => {3, 4, 5}
+
+# Use | for set union
+filled_set | other_set # => {1, 2, 3, 4, 5, 6}
+
+# Set difference with -
+{1, 2, 3, 4} - {2, 3, 5} # => {1, 4} 
+
+# Symmetric difference using ^
+{1, 2, 3, 4} ^ {2, 3, 5} # => {1, 4, 5}
+
+# check if set on left is superset of set on right
+{1, 2} >= {1, 2, 3} # => False
+
+# check if set on left is subset of superset on right
+{1, 2} <= {1, 2, 3} # => True
+
+# Check for existence in a set with in
+2 in filled_set # => True
+filled_set in some_set # => False
+
+# Make copy one layer deep
+filled_set = some_set.copy() # => Return a shallow copy of set
+filled_set is some_set # => False
